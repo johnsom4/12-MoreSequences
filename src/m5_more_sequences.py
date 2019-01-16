@@ -161,10 +161,12 @@ def count_last_n_odds(integers, n):
     #     The testing code is already written for you (above).
     # -------------------------------------------------------------------------
     count = 0
-    for k in range(len(integers)):
-        if integers[len(integers) - 1] % 2 == 1:
-            count = count + 1
+    for k in range(len(integers)-1, len(integers) - n - 1, -1):
+        if integers[k] % 2 == 1:
+            count += 1
     return count
+
+
 
 ###############################################################################
 # Some problems iterate (loop) through PART of the sequence,
